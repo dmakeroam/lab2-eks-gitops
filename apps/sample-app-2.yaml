@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sample-app-2
+  namespace: argocd
+  labels:
+    app.kubernetes.io/part-of: app-resource-group
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/<org>/lab2-eks-gitops.git
+    targetRevision: HEAD
+    path: config/sample-app-2
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: sample-app-2
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true
+  revisionHistoryLimit: 5
