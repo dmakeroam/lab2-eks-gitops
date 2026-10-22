@@ -10,7 +10,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/<org>/lab2-eks-gitops.git
+    repoURL: https://github.com/dmakeroam/lab2-eks-gitops.git
     targetRevision: HEAD
     path: config/hello-world
   destination:
