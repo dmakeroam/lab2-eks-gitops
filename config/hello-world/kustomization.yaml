@@ -2,8 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: hello-world
 resources:
-  - deployment.yaml
-  - service.yaml
+- deployment.yaml
+- service.yaml
 images:
-  - name: demo-app
-    newTag: latest  # CI pipeline writes ECR URI + SHA tag on every build
+- name: demo-app
+  newName: 522605700177.dkr.ecr.us-east-1.amazonaws.com/demo-app
+  newTag: 825fa64fd9c67efb8e2acb2c177a2cd13e12ac63
