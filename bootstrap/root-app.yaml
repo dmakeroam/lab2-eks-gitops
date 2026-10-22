@@ -12,7 +12,7 @@ spec:
   source:
     
     repoURL: https://github.com/dmakeroam/lab2-eks-gitops.git
-    targetRevision: HEAD
+    targetRevision: main
     path: apps
   destination:
     server: https://kubernetes.default.svc
