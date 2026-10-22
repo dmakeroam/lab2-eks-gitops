@@ -5,5 +5,5 @@ resources:
   - deployment.yaml
   - service.yaml
 images:
-  - name: dmakeroam/hello-app
-    newTag: 1.0.0   # CI pipeline writes a new SHA tag here on every build
+  - name: demo-app
+    newTag: latest  # CI pipeline writes ECR URI + SHA tag on every build

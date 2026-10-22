@@ -46,7 +46,7 @@ spec:
               app: hello-world-app
       containers:
         - name: hello-world-app
-          image: dmakeroam/hello-app  # tag managed by kustomization.yaml images[]
+          image: demo-app  # rewritten to ECR URI by kustomization.yaml images[]
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
